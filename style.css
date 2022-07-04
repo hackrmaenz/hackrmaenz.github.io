@@ -6,6 +6,10 @@
     font-family: monospace, sans-serif;
 }
 
+body {
+    background-color: ivory;
+}
+
 @font-face {
     font-family: 'Montserrat';
     font-style: italic;
@@ -39,19 +43,23 @@ h1 {
 
 h2 {
      text-align: center;
-     margin-bottom: 10px;
+     margin-bottom: 5px;
 }
+
 
 section {
     margin: 10px 0px;
     border: 2px dashed black;
     padding: 20px 50px;
-    width: 60%;
+    width: 50%;
     margin: 15px auto;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
     
 }
 
-  .colors {
+.colors {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -63,12 +71,19 @@ section {
     width: 200px;
     height: 165px;
     text-align: center;
-    padding: 60px 0;
-    box-shadow: 1px 4px;  
+    padding: 40px 0;
+    box-shadow: 1px 4px;
 }
 
 .colors > *:hover {
-    font-size: large;
+   opacity: 0.7;
+    
+}
+
+.colors > *:active {
+    margin-top: 2px;
+    margin-bottom: -2px;
+    
 }
 
 .floralwhite {
@@ -92,13 +107,25 @@ section {
 }
 
 .fonts {
-    display: flex;
-    justify-content:center ;
+    
+    text-align: left;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    line-height: 1.5;
+}
+
+.montserrat {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    
 }
 
 .montserrat p {
     font-family: 'Montserrat', monospace;
+    padding-top: 10px;
 }
 
 .montserrat .bold {
@@ -109,8 +136,17 @@ section {
     font-style: italic;
 }
 
+.couriernew {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    
+}
+
 .couriernew p {
     font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+    
 }
 
 .couriernew .bold {
@@ -119,4 +155,98 @@ section {
 
 .couriernew .italic {
     font-style: italic;
+}
+
+div.floralwhite {
+    position: relative;
+}
+
+div.floralwhite a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+div.platinum {
+    position: relative;
+}
+
+div.platinum a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+div.lightgray {
+    position: relative;
+}
+
+div.lightgray a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+div.quicksilver {
+    position: relative;
+}
+
+div.quicksilver a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 10; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.textstyles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.textstyles div {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#textstyles > *, h1, h2, h3, p {
+    text-align: center;
+    line-height: 1.5;
+    margin: 10px 0px 0px 0px;
+}
+
+#centerh2 {
+    text-align: center !important;
 }
